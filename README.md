@@ -30,6 +30,8 @@ We make available the following pre-trained models for this work:
 
 You can find the pre-trained models in this Google Drive link: https://drive.google.com/drive/folders/1QlEZgzscznfPaVv_B62Ipz0grXdeDNIr?usp=sharing
 
+Our data preparation recipe and inference scripts are under [egs/mucs_2021/task1/](egs/mucs_2021/task1/)
+
 ## Extracting features for inference
 For all experiments, we extracted 80-dimensional log Mel filterbank features with a window size of 25 ms computed at every 10 ms.
 The features are extracted using `torchaudio.compliance.kaldi.fbank`
