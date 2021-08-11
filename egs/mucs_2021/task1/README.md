@@ -4,6 +4,11 @@
 
 This paper describes the multilingual ASR systems developed at Dialpad, Inc. for the Multilingual ASR challenge for low resource Indian languages at Interspeech 2021. We participated in Sub-task 1, where the systems are trained on data of six Indic languages provided by the organizers. On this task, we experimented with both hybrid HMM-DNN and end-to-end ASR architectures and studied how fine-tuning techniques can help in this multilingual scenario. We also experimented with both multilingual and language-specific decoders by using a pre-trained encoder, as well as the use of appropriate RNN and n-gram language models. Furthermore, we present novel studies on transliteration-based pre-training of the encoder, and a joint LID and ASR architecture. We show that the multilingual end-to-end ASR models outperform both hybrid model and monolingual baselines. Also, we demonstrate that current methods of joint LID-ASR fail when there are confounding channel characteristics. We conducted studies and propose ideas on how to mitigate the effect of some of the channel characteristics on the task of language recognition. Our best submission to the challenge achieved an average WER of $22.95\%$ on the development set and $31.87\%$ on the held-out test set and contains language-specific decoders fine-tuned on the multilingual encoder, along with the use of language-specific RNNLMs and n-gram LMs.
 
+
+## Video Presentation
+
+[![Dialpad video presentation for MUCS 2021 workshop](https://img.youtube.com/vi/_ZGWXh3UMiI/0.jpg)](https://youtu.be/_ZGWXh3UMiI)
+
 ## Models
 All the end-to-end models in this work are trained using the ESPnet toolkit. Hence, the inference also follows the standard format of the toolkit.
 The features are extracted using `torchaudio` (as opposed to `kaldi` binaries) in the toolkit. We provide the feature extraction code as well.
